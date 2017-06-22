@@ -17,12 +17,12 @@
         android:paddingLeft="16dp">
 
         <TextView
-            android:id="@+id/text_mountain_name"
+            android:id="@+id/text_lake_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/text_mountain_height"
+            android:id="@+id/text_lake_infos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

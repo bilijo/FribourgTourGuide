@@ -19,15 +19,27 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
         this.context = context;
     }
 
+    // Returns total number of tabs (pages)
     @Override
     public int getCount() {
         return PAGE_COUNT;
     }
 
+    // Returns the fragment to display for that page
     @Override
     public Fragment getItem(int position) {
 
-        return PageFragment.newInstance(position + 1);
+        //return PageFragment.newInstance(position + 1);
+
+        switch (position) {
+            case 0: // Fragment # 0 - This will show MountainsFragment
+                return MountainsFragment.newInstance(position + 1);
+            case 1: // Fragment # 1 - This will show LakesFragment
+                return LakesFragment.newInstance(position + 1);
+            default:
+                return null;
+        }
+
     }
 
     @Override

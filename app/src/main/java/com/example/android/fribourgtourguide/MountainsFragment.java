@@ -6,25 +6,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.AdapterView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class PageFragment extends Fragment {
+public class MountainsFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
 
     private int mPage;
 
-// What for ?
-    public static PageFragment newInstance(int page) {
+    // Create fragment and give it an argument specifying the item it should show
+    public static MountainsFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-        PageFragment fragment = new PageFragment();
+        MountainsFragment fragment = new MountainsFragment();
         fragment.setArguments(args);
         return fragment;
     }
-
+    // Store instance variables based on arguments passed
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +41,12 @@ public class PageFragment extends Fragment {
 
      // create a list of mountains item
         ArrayList<Mountains> mountainsArrayList = new ArrayList<>();
-        mountainsArrayList.add(new Mountains(R.drawable.mountains_gastlosen,"ttt","gggg"));
+        mountainsArrayList.add(new Mountains(R.drawable.mountains_kaiseregg_240px,"ttt","gggg"));
 
     // Create an instance of MountainsAdapter class
         MountainsAdapter mountainsAdapter = new MountainsAdapter(getActivity(), mountainsArrayList);
-
-        ListView listMountainView = (ListView)view.findViewById(R.id.item_list_mountains);
+// Into the layout list, populate listView with object
+        ListView listMountainView = (ListView)view.findViewById(R.id.item_list);
         listMountainView.setAdapter(mountainsAdapter);
         return view;
 
