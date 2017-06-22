@@ -10,14 +10,20 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MountainsFragment extends Fragment {
-    public static final String ARG_PAGE = "ARG_PAGE";
+    public static final String ARG_PAGE = "PICTURE";
 
-    private int mPage;
+    // Store instance variables
+    private int imageResource;
+    private String title;
+    private String height;
 
     // Create fragment and give it an argument specifying the item it should show
-    public static MountainsFragment newInstance(int page) {
+    public static MountainsFragment newInstance(int imageResourceId, String vName, String vHeight) {
         Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, page);
+        args.putInt(ARG_PAGE, imageResourceId);
+        args.putString("name", vName);
+        args.putString("height", vHeight);
+
         MountainsFragment fragment = new MountainsFragment();
         fragment.setArguments(args);
         return fragment;
@@ -26,7 +32,11 @@ public class MountainsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPage = getArguments().getInt(ARG_PAGE);
+
+       // mPage = getArguments().getInt(ARG_PAGE);
+        imageResource = getArguments().getInt(ARG_PAGE);
+        title = getArguments().getString("name");
+        height = getArguments().getString("height");
     }
 
     @Override
@@ -35,13 +45,9 @@ public class MountainsFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_page_fragment, container, false);
 
-       /* TextView textView = (TextView) view;
-        textView.setText("Fragment #" + mPage);
-        return view; */
-
      // create a list of mountains item
         ArrayList<Mountains> mountainsArrayList = new ArrayList<>();
-        mountainsArrayList.add(new Mountains(R.drawable.mountains_kaiseregg_240px,"ttt","gggg"));
+        mountainsArrayList.add(new Mountains(imageResource,title,height));
 
     // Create an instance of MountainsAdapter class
         MountainsAdapter mountainsAdapter = new MountainsAdapter(getActivity(), mountainsArrayList);

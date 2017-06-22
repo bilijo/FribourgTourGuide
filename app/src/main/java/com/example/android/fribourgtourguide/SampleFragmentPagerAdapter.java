@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+
+
 /**
  * Created by dam on 21.06.2017.
  */
@@ -29,13 +31,12 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        //return PageFragment.newInstance(position + 1);
-
-        switch (position) {
+          switch (position) {
             case 0: // Fragment # 0 - This will show MountainsFragment
-                return MountainsFragment.newInstance(position + 1);
+                //return MountainsFragment.newInstance(int mountainImage, String vName, String vMountainHigh);
+              return MountainsFragment.newInstance();
             case 1: // Fragment # 1 - This will show LakesFragment
-                return LakesFragment.newInstance(position + 1);
+                return LakesFragment.newInstance(int lakeImage, String vLakeName, String vLakeHigh);
             default:
                 return null;
         }

@@ -9,15 +9,21 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class LakesFragment extends Fragment {
-    public static final String ARG_PAGE = "ARG_PAGE";
+public class LakesFragment extends Fragment {  
+    public static final String ARG_PAGE = "PICTURE";
 
-    private int mPage;
+    // Store instance variables
+    private int imageResource;
+    private String title;
+    private String height;
 
     // Create fragment and give it an argument specifying the item it should show
-    public static LakesFragment newInstance(int page) {
+    public static LakesFragment newInstance(int imageResourceId, String vName, String vHeight) {
         Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, page);
+        args.putInt(ARG_PAGE, imageResourceId);
+        args.putString("name", vName);
+        args.putString("height", vHeight);
+
         LakesFragment fragment = new LakesFragment();
         fragment.setArguments(args);
         return fragment;
@@ -26,7 +32,10 @@ public class LakesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPage = getArguments().getInt(ARG_PAGE);
+        // mPage = getArguments().getInt(ARG_PAGE);
+        imageResource = getArguments().getInt(ARG_PAGE);
+        title = getArguments().getString("name");
+        height = getArguments().getString("height");
     }
 
     @Override
@@ -35,19 +44,15 @@ public class LakesFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_page_fragment, container, false);
 
-       /* TextView textView = (TextView) view;
-        textView.setText("Fragment #" + mPage);
-        return view; */
-
-     // create a list of Lakes item
+        // create a list of lakes item
         ArrayList<Lakes> lakesArrayList = new ArrayList<>();
-        lakesArrayList.add(new Lakes(R.drawable.lac_morat_240px,"ttt","gggg"));
+        lakesArrayList.add(new Lakes(imageResource,title,height));
 
-    // Create an instance of LakesAdapter class
+        // Create an instance of LakesAdapter class
         LakesAdapter lakesAdapter = new LakesAdapter(getActivity(), lakesArrayList);
 // Into the layout list, populate listView with object
-        ListView listLakeView = (ListView)view.findViewById(R.id.item_list);
-        listLakeView.setAdapter(lakesAdapter);
+        ListView listLakesView = (ListView)view.findViewById(R.id.item_list);
+        listLakesView.setAdapter(lakesAdapter);
         return view;
 
     }
