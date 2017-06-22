@@ -10,34 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MountainsFragment extends Fragment {
-    public static final String ARG_PAGE = "PICTURE";
 
-    // Store instance variables
-    private int imageResource;
-    private String title;
-    private String height;
-
-    // Create fragment and give it an argument specifying the item it should show
-    public static MountainsFragment newInstance(int imageResourceId, String vName, String vHeight) {
-        Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, imageResourceId);
-        args.putString("name", vName);
-        args.putString("height", vHeight);
-
-        MountainsFragment fragment = new MountainsFragment();
-        fragment.setArguments(args);
-        return fragment;
-    }
-    // Store instance variables based on arguments passed
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-       // mPage = getArguments().getInt(ARG_PAGE);
-        imageResource = getArguments().getInt(ARG_PAGE);
-        title = getArguments().getString("name");
-        height = getArguments().getString("height");
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,7 +20,7 @@ public class MountainsFragment extends Fragment {
 
      // create a list of mountains item
         ArrayList<Mountains> mountainsArrayList = new ArrayList<>();
-        mountainsArrayList.add(new Mountains(imageResource,title,height));
+        mountainsArrayList.add(new Mountains(R.drawable.mountains_kaiseregg_240px,"ttt","gggg"));
 
     // Create an instance of MountainsAdapter class
         MountainsAdapter mountainsAdapter = new MountainsAdapter(getActivity(), mountainsArrayList);

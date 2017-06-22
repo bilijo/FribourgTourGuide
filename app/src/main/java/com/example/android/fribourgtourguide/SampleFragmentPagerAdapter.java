@@ -34,9 +34,9 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
           switch (position) {
             case 0: // Fragment # 0 - This will show MountainsFragment
                 //return MountainsFragment.newInstance(int mountainImage, String vName, String vMountainHigh);
-              return MountainsFragment.newInstance();
+              return new MountainsFragment();
             case 1: // Fragment # 1 - This will show LakesFragment
-                return LakesFragment.newInstance(int lakeImage, String vLakeName, String vLakeHigh);
+                return new LakesFragment();
             default:
                 return null;
         }
