@@ -20,9 +20,9 @@ public class LakesFragment extends Fragment {
         // create a list of lakes item
         ArrayList<Lakes> lakesArrayList = new ArrayList<>();
         lakesArrayList.add(new Lakes(R.drawable.lac_murten, "Lac de Morat", "Surface area 22.8 km2 "));
-        lakesArrayList.add(new Lakes(R.drawable.lac_de_gruyere, "Lac de Morat", "Surface area 22.8 km2 "));
-        lakesArrayList.add(new Lakes(R.drawable.lac_noir, "Lac de Morat", "Surface area 22.8 km2 "));
-
+        lakesArrayList.add(new Lakes(R.drawable.lac_de_gruyere, "Lac de Gruyère", "Surface area 9,6 km² "));
+        lakesArrayList.add(new Lakes(R.drawable.lac_noir, "Lac Noir", "Surface area 47 ha "));
+        lakesArrayList.add(new Lakes(R.drawable.lac_schiffenen, "Lac de Schiffenen", "Surface area 4,25 km² "));
         // Create an instance of LakesAdapter class
         LakesAdapter lakesAdapter = new LakesAdapter(getActivity(), lakesArrayList);
 

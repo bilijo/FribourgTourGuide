@@ -1,12 +1,14 @@
 package com.example.android.fribourgtourguide;
 
+import android.app.ActionBar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-// variables used to  initialize the navigation
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
 
+    // add logo into the action bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(ContextCompat.getDrawable(this,R.mipmap.wappen_freiburg_48px));
 
     }
 }
