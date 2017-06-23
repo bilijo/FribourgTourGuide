@@ -27,7 +27,6 @@ public class LakesAdapter extends ArrayAdapter<Lakes> {
     public LakesAdapter(@NonNull Context context, @NonNull ArrayList<Lakes> objects) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         super(context, 0, objects);
-
     }
 
     @NonNull

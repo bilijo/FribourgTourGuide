@@ -12,7 +12,7 @@ public class Mountains {
     private String mMountainHigh;
 
     /*
-    * Create a new AndroidFlavor object.
+    * Create a new Mountain object.
     * @Params : image, name, high of the mountain object
     */
     public Mountains(int imageResourceId, String vName, String vHigh) {

@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/linearLayout_padding">
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/list_item_picture"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="@dimen/linearLayout_marging">
 
         <TextView
-            android:id="@+id/text_mountain_name"
+            android:id="@+id/text_musee_name"
+            style="@style/style_musees_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/style_mountains_title"/>
+            android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/text_mountain_height"
+            android:id="@+id/text_musee_infos"
+            style="@style/style_musees_infos"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/linearLayout_padding"/>
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
 
 </LinearLayout>

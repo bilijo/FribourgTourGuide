@@ -8,12 +8,12 @@ public class Lakes {
     // Name of the lake in Fribourg county
     private String mLakeName;
 
-    // High of the lake in meters
+    // Area of the lake in meters square
     private String mLakeInfos;
 
     /*
-    * Create a new AndroidFlavor object.
-    * @Params : image, name, high of the lake object
+    * Create a new Lake object.
+    * @Params : image, name, area of the lake object
     */
     public Lakes(int imageResourceId, String vName, String vInfos) {
         mLakeName = vName;

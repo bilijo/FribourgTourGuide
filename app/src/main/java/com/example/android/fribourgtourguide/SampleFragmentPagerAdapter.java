@@ -1,9 +1,9 @@
 package com.example.android.fribourgtourguide;
+
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
 
 
 /**
@@ -12,8 +12,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    final int PAGE_COUNT = 5;
-    private String tabTitles[] = new String[] { "mountains", "lakes", "musees","food","anticonstitutionel" };
+    final int PAGE_COUNT = 4;
+    private String tabTitles[] = new String[]{"mountains", "lakes", "musees", "food"};
     private Context context;
 
     public SampleFragmentPagerAdapter(FragmentManager fm, Context context) {
@@ -31,14 +31,17 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-          switch (position) {
+        switch (position) {
             case 0: // Fragment # 0 - This will show MountainsFragment
-                //return MountainsFragment.newInstance(int mountainImage, String vName, String vMountainHigh);
-              return new MountainsFragment();
+                return new MountainsFragment();
             case 1: // Fragment # 1 - This will show LakesFragment
                 return new LakesFragment();
+            case 2: // Fragment # 2- This will show MuseesFragment
+                return new MuseesFragment();
+            case 3: // Fragment # 3- This will show RecipesFragment
+                return new RecipesFragment();
             default:
-                return null;
+                return new RecipesFragment();
         }
 
     }
