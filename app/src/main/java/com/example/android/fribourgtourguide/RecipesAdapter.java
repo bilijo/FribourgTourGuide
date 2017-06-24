@@ -44,21 +44,24 @@ public class RecipesAdapter extends ArrayAdapter<Recipes> {
 
         // Find the TextView in the list_recipes.xml layout with the ID text_recipe_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.text_recipe_name);
-
         // Get the  name from the current Recipes object and
         // set this text on the name TextView
         nameTextView.setText(currentRecipe != null ? currentRecipe.getRecipeName() : null);
 
         // Find the TextView in the list_recipes.xml layout with the ID text_recipe_infos
-        TextView numberTextView = (TextView) listItemView.findViewById(R.id.text_recipe_infos);
+        TextView infosTextView = (TextView) listItemView.findViewById(R.id.text_recipe_infos);
+        // Get the information from the current Recipes object and
+        // set this text on the infos TextView
+        infosTextView.setText(currentRecipe != null ? currentRecipe.getRecipeInfos() : null);
 
-        // Get the version number from the current Recipes object and
-        // set this text on the number TextView
-        numberTextView.setText(currentRecipe != null ? currentRecipe.getRecipeInfos() : null);
+        // Find the TextView in the list_recipes.xml layout with the ID text_recipe_resto
+        TextView restosTextView = (TextView) listItemView.findViewById(R.id.text_recipe_resto);
+        // Get the information from the current Recipes object and
+        // set this text on the restos TextView
+        restosTextView.setText(currentRecipe != null ? currentRecipe.getRecipeRestos() : null);
 
         // Find the ImageView in the list_recipes.xml layout with the ID list_item_icon
         ImageView pictureView = (ImageView) listItemView.findViewById(R.id.list_item_picture);
-
         // Get the image resource ID from the current Recipes object and
         // set the image to iconView
         pictureView.setImageResource(currentRecipe != null ? currentRecipe.getImageResourceId() : 0);

@@ -27,6 +27,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <TextView
+            android:id="@+id/text_recipe_resto"
+            style="@style/style_recipes_restos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/linearLayout_marging"/>
+
     </LinearLayout>
 
 </LinearLayout>
