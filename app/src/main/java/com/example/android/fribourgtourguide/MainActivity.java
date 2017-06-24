@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     // add logo into the action bar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(ContextCompat.getDrawable(this,R.mipmap.wappen_freiburg_48px));
+        getSupportActionBar().setIcon(ContextCompat.getDrawable(this,R.drawable.wappen_freiburg_rightspace));
 
     }
 }
