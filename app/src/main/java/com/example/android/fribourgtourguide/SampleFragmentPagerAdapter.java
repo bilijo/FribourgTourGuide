@@ -1,9 +1,12 @@
 package com.example.android.fribourgtourguide;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 
 /**
@@ -13,12 +16,18 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     final int PAGE_COUNT = 4;
-    private String tabTitles[] = new String[]{"mountains", "lakes", "musees", "recipes"};
+    String tabTitles[] = new String[]{};
     private Context context;
+    //private String tabTitles[] = new String[]{"Mountains", "Lakes", "Musees", "Recipes"};
+
 
     public SampleFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
+           tabTitles = new String[]{context.getString(R.string.tab_title_mountains),
+                   context.getString(R.string.tab_title_lakes),context.getString(R.string.tab_title_musees),
+                   context.getString(R.string.tab_title_recipes)};
+
     }
 
     // Returns total number of tabs (pages)
@@ -46,9 +55,12 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     }
 
+
     @Override
     public CharSequence getPageTitle(int position) {
         // Generate title based on item position
         return tabTitles[position];
     }
+
 }
+

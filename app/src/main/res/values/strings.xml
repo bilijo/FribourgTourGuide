@@ -1,6 +1,78 @@
 <resources>
     <string name="app_name">Fribourg Tour Guide</string>
-    <string name="title">Fribourg Tour Guide</string>
+    <!-- provide tab's title for lists  -->
+    <string name="tab_title_mountains">Mountains</string>
+    <string name="tab_title_lakes">Lakes</string>
+    <string name="tab_title_musees">Musees</string>
+    <string name="tab_title_recipes">Recipes</string>
 
-    <string name="action_settings">Settings</string>
+    <!-- Mountains texts  -->
+    <string name="txt_kaiseregg_name">Kaiseregg - 2 185 m</string>
+    <string name="txt_kaiseregg_adress">Schwarzsee Tourismus\nSchwarzseestrasse 212\n1716 Schwarzsee</string>
+
+    <string name="txt_vanilNoir_name">Vanil Noir - 2 389 m</string>
+    <string name="txt_vanilNoir_adress">Charmey Tourisme\nLes Charrières 1\n1637 Charmey</string>
+
+    <string name="txt_dentderuth_name">Dent de Ruth - 2 236 m</string>
+    <string name="txt_dentderuth_adress">Schwarzsee Tourismus\n1637 Val de Charmey</string>
+
+    <string name="txt_gastlosen_name">Gastlosen - 2 252 m</string>
+    <string name="txt_gastlosen_adress">Schuwey\'s BnB \nAbländschenstrasse 54\n1656 Jaun</string>
+
+    <!-- Lakes texts  -->
+    <string name="txt_lacMorat_name">Lac de Morat</string>
+    <string name="txt_lacMorat_adress">Murten Tourismus\nFranzösische Kirchgasse 6\n3280 Murten</string>
+
+    <string name="txt_lacdegruyere_name">Lac de Gruyère</string>
+    <string name="txt_lacdegruyere_adress">La Gruyère Tourisme\nPlace des Alpes 26\n1630 Bulle</string>
+
+    <string name="txt_lacNoir_name">Lac Noir</string>
+    <string name="txt_lacNoir_adress">Schwarzsee Tourismus\nSchwarzseestrasse 212\n1716 Schwarzsee</string>
+
+    <string name="txt_lacschiffenen_name">Lac de Schiffenen</string>
+    <string name="txt_lacschiffenen_adress">Fribourg Tourisme et Région\nPlace Jean-Tinguely 1\n1701 Fribourg</string>
+
+    <!-- Musees texts  -->
+    <string name="txt_museeGruyerien_name">Musée Gruyérien</string>
+    <string name="txt_museeGruyerien_adress">Rue de la Condémine 25, 1630 Bulle</string>
+
+    <string name="txt_museeHistoireNaturelle_name">Musée d\'histoire naturelle</string>
+    <string name="txt_museeHistoireNaturelle_adress">Chemin du Musée 6, 1700 Fribourg</string>
+
+    <string name="txt_maisonCailler_name">Maison Cailler, la chocolaterie</string>
+    <string name="txt_maisonCailler_adress">Rue Jules Bellet 7, 1636 Broc
+At Maison Cailler, we open the door for you to explore Cailler’s chocolate world.</string>
+
+    <string name="txt_maisonduGruyere_name">La Maison du Gruyère AOP</string>
+    <string name="txt_maisonduGruyere_adress">Place de la Gare 3, 1663 Pringy-Gruyères
+Ouvert tous les jours, dernière entrée 30 min avant la fermeture Juin à septembre: 9h00 à 18h30 | Octobre à mai: 9h00 à 18h00 </string>
+
+    <string name="txt_museeMachineCoudre_name">Musée suisse de la machine à coudre</string>
+    <string name="txt_museeMachineCoudre_adress">Grand Rue 58 - 1700 Fribourg
+250 machines à coudre, 2000 objets insolites: visites guidées en français, allemand et anglais sur rendez-vous</string>
+
+
+    <!-- Recipes texts  -->
+    <string name="txt_recipeFondue_name">Fondue moitié-moitié</string>
+    <string name="txt_recipeFondue_info">Half Gruyère cheese, half Vacherin – that\’s how you make a Fribourg fondue, Switzerland\'s favourite.
+                        Exactly why this warm \'cheese soup\' became our national dish is unclear. </string>
+    <string name="txt_recipeFondue_adress">Auberge de la Cigogne,\n Rue d\'Or 24, \n 1700 Fribourg</string>
+
+    <string name="txt_recipeGateauVully_name">Gâteau du Vully</string>
+    <string name="txt_recipeGateauVully_info"> Le gâteau du Vully est une spécialité du Vully, en Suisse.
+        La version la plus connue de ce gâteau est celle au sucre et à la crème</string>
+    <string name="txt_recipeGateauVully_adress">Hôtel-Restaurant-Cave Bel-Air\nRoute Principale 145\n1788 Praz-Vully</string>
+
+    <string name="txt_recipeRosti_name">Roesti à la Singinoise</string>
+    <string name="txt_recipeRosti_info"> Cuire les pommes de terre le matin et laisser refroidir. Eplucher les pommes de terre et les râper avec une râpe à röstis." +
+                        " Mettre dans une poêle le saindoux ou un peu d’huile. Ajouter l\'oignon," +
+                        " faire revenir doucement. Ajouter le lard et les pommes de terre,saler." +
+                        " Remuer plusieurs fois au début et ensuite laisser dorer de chaque côte. </string>
+    <string name="txt_recipeRosti_adress">Restaurant Chemi-Hütta\nZur Schür 24\n1736 St. Silvester</string>
+
+    <string name="txt_recipeCuchaule_name">Cuchaule</string>
+    <string name="txt_recipeCuchaule_info">La cuchaule est un pain brioché originaire du canton de Fribourg. La base est une sorte de brioche au lait à laquelle est ajouté du safran," +
+                        " ce qui lui donne une couleur jaune ", </string>
+    <string name="txt_recipeCuchaule_adress">Auberge de la Croix Blanche -1583 Villarepos</string>
+
 </resources>

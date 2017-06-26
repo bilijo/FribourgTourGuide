@@ -19,26 +19,17 @@ public class RecipesFragment extends Fragment {
 
         // create a list of recipes item
         ArrayList<Recipes> recipesArrayList = new ArrayList<>();
-        recipesArrayList.add(new Recipes(R.drawable.fondue_fribourg, "Fondue moitié moitié",
-                "Half Gruyère cheese, half Vacherin – that’s how you make a Fribourg fondue, Switzerland's favourite." +
-                        " Exactly why this warm \"cheese soup\" became our national dish is unclear.  ",
-                "Auberge de la Cigogne,\n Rue d'Or 24, \n 1700 Fribourg " ));
+        recipesArrayList.add(new Recipes(R.drawable.fondue_fribourg, getString(R.string.txt_recipeFondue_name),
+                getString(R.string.txt_recipeFondue_info), getString(R.string.txt_recipeFondue_adress)));
 
-        recipesArrayList.add(new Recipes(R.drawable.cuchaule, "Cuchaule",
-                "La cuchaule est un pain brioché originaire du canton de Fribourg. La base est une sorte de brioche au lait à laquelle est ajouté du safran," +
-                        " ce qui lui donne une couleur jaune ","Auberge de la Croix Blanche -1583 Villarepos"));
+        recipesArrayList.add(new Recipes(R.drawable.cuchaule, getString(R.string.txt_recipeCuchaule_name),
+                getString(R.string.txt_recipeCuchaule_info), getString(R.string.txt_recipeCuchaule_adress)));
 
-        recipesArrayList.add(new Recipes(R.drawable.gateau_du_vully, "Gâteau du Vully",
-                "Half Gruyère cheese, half Vacherin – that’s how you make a Fribourg fondue, Switzerland's favourite." +
-                        " Exactly why this warm \"cheese soup\" became our national dish is unclear.",
-                "Auberge de l'Etoile,\n Au Village 21,\n 1721 Courtion "));
+        recipesArrayList.add(new Recipes(R.drawable.gateau_du_vully, getString(R.string.txt_recipeGateauVully_name),
+                getString(R.string.txt_recipeGateauVully_info), getString(R.string.txt_recipeGateauVully_adress)));
 
-        recipesArrayList.add(new Recipes(R.drawable.roesti_singinois, "Roesti à la Singinoise",
-                "Cuire les pommes de terre le matin et laisser refroidir. Eplucher les pommes de terre et les râper avec une râpe à röstis." +
-                        " Mettre dans une poêle le saindoux ou un peu d’huile. Ajouter l'oignon," +
-                        " faire revenir doucement. Ajouter le lard et les pommes de terre,saler." +
-                        " Remuer plusieurs fois au début et ensuite laisser dorer de chaque côte. ",
-                "Hôtel de l'Ours,\n Route de l'Ancien Pont 5\n 1786 Sugiez "));
+        recipesArrayList.add(new Recipes(R.drawable.roesti_singinois, getString(R.string.txt_recipeRosti_name),
+                getString(R.string.txt_recipeRosti_info), getString(R.string.txt_recipeRosti_adress)));
 
 
         // Create an instance of RecipesAdapter class

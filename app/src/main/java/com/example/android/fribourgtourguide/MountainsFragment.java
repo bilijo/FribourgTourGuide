@@ -20,10 +20,10 @@ public class MountainsFragment extends Fragment {
 
      // create a list of mountains item
         ArrayList<Mountains> mountainsArrayList = new ArrayList<>();
-        mountainsArrayList.add(new Mountains(R.drawable.kaiseregg2,"Kaiseregg","Altitude : 2 185 m"));
-        mountainsArrayList.add(new Mountains(R.drawable.mountains_vanilnoir,"Vanil Noir","Altitude : 2 389 m"));
-        mountainsArrayList.add(new Mountains(R.drawable.mountains_dentderuth,"Dent de Ruth","Altitude : 2 236 m"));
-        mountainsArrayList.add(new Mountains(R.drawable.mountains_gastlosen,"Gastlosen","Altitude : 2 252 m"));
+        mountainsArrayList.add(new Mountains(R.drawable.kaiseregg2,getString(R.string.txt_kaiseregg_name),getString(R.string.txt_kaiseregg_adress )));
+        mountainsArrayList.add(new Mountains(R.drawable.mountains_vanilnoir,getString(R.string.txt_vanilNoir_name),getString(R.string.txt_vanilNoir_adress )));
+        mountainsArrayList.add(new Mountains(R.drawable.mountains_dentderuth,getString(R.string.txt_dentderuth_name),getString(R.string.txt_dentderuth_adress)));
+        mountainsArrayList.add(new Mountains(R.drawable.mountains_gastlosen,getString(R.string.txt_gastlosen_name),getString(R.string.txt_gastlosen_adress)));
     // Create an instance of MountainsAdapter class
         MountainsAdapter mountainsAdapter = new MountainsAdapter(getActivity(), mountainsArrayList);
 // Into the layout list, populate listView with object
